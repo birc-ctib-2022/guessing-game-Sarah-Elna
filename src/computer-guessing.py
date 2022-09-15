@@ -69,7 +69,7 @@ while True:
         guess_highest = new_range[-1]
         guess_lowest = new_range[0]
         print("I must have been too high, right?", result)
-    if result == "high"
+    if result == "high":
         new_range = range[guess_lowest:guess]
         guess = new_range[len(new_range)//2]
         guess_highest = new_range[-1]

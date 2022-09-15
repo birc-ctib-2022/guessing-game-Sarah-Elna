@@ -59,7 +59,7 @@ while True:
     result = input_selection(
         "I'm guessing {}\nHow is my guess?".format(guess),
         ["low", "hit", "high"]
-    )
+        )
     if result == "hit":
         print("Wuhuu!")
         break
@@ -68,10 +68,10 @@ while True:
         guess = new_range[len(new_range)//2]
         guess_highest = new_range[-1]
         guess_lowest = new_range[0]
-        print("I must have been too high, right?", result)
+        print("My new guess is ", result)
     if result == "high":
         new_range = range[guess_lowest:guess]
         guess = new_range[len(new_range)//2]
         guess_highest = new_range[-1]
         guess_lowest = new_range[0]
-        print("I must have been too high, right?", result)
+        print("My new guess is ", result)

@@ -1,0 +1,34 @@
+# Exercise 1: Prove that all three algorithms are correct and terminate.
+
+## Prerequisit
+For the algorithm to work, the response must be honest, and the guess must be within the interval of possible answers.
+
+## Strategy 1
+Start with guessing 1, and then continue adding 1 until you get a hit.
+
+The answer is 1: There will be an instant hit, and the algorithm terminates with the correct answer.
+The answer is not 1: The answer can only be within the range of 2:20. Within 19 steps adding one to the guess, there will be a hit. The algorithm wil then terminate with the correct answer.
+
+## Strategy 2
+Start with guessing 20, and then continue subtracting 1 untill you get a hit.
+
+The answer is 20: There will be an instant hit, and the algorithm terminates with the correct answer.
+The answer is not 20: The answer can only be within the range of 1:19. Within 19 steps subtracting one from the guess, there will be a hit. The algorithm wil then terminate with the correct answer.
+
+## Strategy 3
+Start with guessing 10, then guess the median of the new interval untill you get a hit.
+
+The answer is 10: There will be an instant hit, and the algorithm terminates with the correct answer.
+The answer is not 10: The answer must then be in the interval 11-20 (when the guess was too low) or 1-9 (when the guess was too high). The next guess is the rounded median for the new interval. If the next guess is not a hit, a new interval is defined. This can be repeated a maximum of 4 times. The algorithm terminates with the correct answer.
+
+1 2 3 4 5 6 7 8 9 | 11 12 13 14 | 16 17 | | 20
+                  1             2       3 4 hit
+
+# Exercise 2: Rank the algorithms based on efficiency and justify the ranking.
+
+The third strategy is the most efficient, because it has a guaranteed hit within a maximum of 4 guesses each time.
+The first and second strategy are equally likely, of the answer is compleatly random. They each have a maximum of 20 guesses before a hit is guaranteed.
+
+# Exercise 3: Implement strategy 2 and 3 in computer-guessing.py
+
+Look at computer-guessing for answer.

@@ -67,7 +67,7 @@ while True:
         new_range = range[guess:guess_highest]
         guess = new_range[len(new_range)//2]
         guess_highest = new_range[-1]
-        guess_lowest = new_range[0]
+        guess_lowest = new_range[0] + 1
         print("My new guess is ", result)
     if result == "high":
         new_range = range[guess_lowest:guess]

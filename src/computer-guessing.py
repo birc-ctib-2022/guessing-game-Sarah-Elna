@@ -54,7 +54,7 @@ for guess in reversed(range(1, 21)):
 
 guess = 10
 guess_lowest = 1
-guess_highest = 20
+guess_highest = 21
 while True:
     result = input_selection(
         "I'm guessing {}\nHow is my guess?".format(guess),
